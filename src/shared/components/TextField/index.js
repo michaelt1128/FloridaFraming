@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import './styles.scss';
 
 const TextField = props => {
-    const cn = classnames('ffs-textfield', props.className);
+    const cn = classnames('ffs-textfield', props.className, { 'negative': props.style === 'negative' });
     const labelCn = classnames('__label', { '--float': props.value });
     
     return (
