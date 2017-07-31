@@ -10,6 +10,7 @@
         font-size: 16px;
         transition: all .1s ease-in;
         color: $med-dark-gray;
+        pointer-events: none;
 
         &.--float {
             top: -16px;
