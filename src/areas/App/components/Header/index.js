@@ -21,15 +21,15 @@ class Header extends Component {
         return (
             <div className="header">
                 <div className="__logo">
-                    Logo here :)
+                    <img src="assets/Florida_Framing.jpg" />
                 </div>
                 <div className="__actions">
                     <TextField
                         value={this.state.value}
-                        label="text"
+                        label="Search"
                         onChange={this.handleChange}
                     />
-                    <button />
+                    <button className="__button">Search</button>
                 </div>
             </div>
         )

@@ -1,10 +1,32 @@
 @import 'src/shared/styles/colors';
-
 .footer {
-    height: 100px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow:hidden;
+    margin-top:8px;
+    background-color: rgba(192, 192, 192, 0.15);
+    color: #777;
+    .__layout {
+        width: 100%;
+        border-top: 1px solid #e2e2e2;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .__header {
+            color: $med-light-blue;
+            text-align: center;
+        }
+        .__about {
+            text-align: left;
+            margin-left: 8px;
+        }
+        .__icon {
+            width: 32px;
+        }
+        .__button {}
+    }
+    .__copyright{
+        margin-top:8px;
+        text-align: center;
+        font-size:12px;
+    }
 }
