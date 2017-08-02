@@ -7,10 +7,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     
     .__logo {
         display: flex;
         justify-content: center;
+        .__logo-image{
+            opacity: .5;
+        }
     }
 
     .__actions {
@@ -24,5 +28,12 @@
     .__button{
         background:$med-light-blue;
         color:white;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .header{
+        flex-direction:column;
+        height:144px;
     }
 }

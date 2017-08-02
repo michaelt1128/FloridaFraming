@@ -6,7 +6,9 @@
     max-height: 200px;
     border: 1px solid $med-dark-gray;
     padding: 8px;
-    box-shadow: 1px 1px 4px $med-dark-gray;
+    -webkit-box-shadow: 5px 5px 10px #e6e6e6;
+    -moz-box-shadow: 5px 5px 10px #e6e6e6;
+    box-shadow: 5px 5px 10px #e6e6e6; 
     margin: 8px;
     .__image-container {
         border: 1px solid $med-dark-gray;
@@ -20,7 +22,6 @@
     }
     img {
         width: 100%;
-        
     }
 }
 

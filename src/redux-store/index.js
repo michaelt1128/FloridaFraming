@@ -4,7 +4,9 @@ import adminReducer from './admin';
 import supplyReducer from './supplies';
 
 const rootReducer = combineReducers({
-    authReducer,adminReducer,supplyReducer
+    auth:authReducer,
+    admin:adminReducer,
+    supply:supplyReducer
 });
 
 export default rootReducer;
