@@ -10,7 +10,7 @@ import {
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import reducers from "./redux-store";
+import reducers from "reduxStore";
 import App from './areas/App';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);

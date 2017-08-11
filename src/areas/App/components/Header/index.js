@@ -3,7 +3,7 @@ import TextField from "shared/components/TextField";
 import { autobind } from "core-decorators";
 import { withRouter, Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { updateSearch } from "../../../../redux-store/supplies";
+import { updateSearch } from "reduxStore/supplies";
 import "./styles.scss";
 
 @withRouter

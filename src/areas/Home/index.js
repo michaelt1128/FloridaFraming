@@ -5,9 +5,11 @@ import Card from "shared/components/Card";
 import Login from "./components/Login";
 import "./styles.scss";
 import { autobind } from "core-decorators";
-import { updateUsername, updatePassword } from "../../redux-store/auth";
+import { updateUsername, updatePassword } from "reduxStore/auth";
 import "shared/styles/font-awesome-4.7.0/css/font-awesome.css";
 import { slideOut } from "react-animations";
+import WelcomeDisplay from "./components/WelcomeDisplay"
+
 
 @withRouter
 @connect(
@@ -42,56 +44,15 @@ export default class Home extends Component {
   handleLogin(event) {
     event.preventDefault();
   }
+
   render() {
     return (
       <div className="home-container">
         <div className="__welcome-container">
-          <div className="__welcome-content">
-            <div className="__welcome-text">
-              <h3>Welcome to the site</h3>
-              Welcome to florida Framing Supplies, Jacksonville's
-              number one wholesaler of mats and mouldings.
-              We supply custom cut mats, mat board, picture
-              frames & framing supplies at wholesale prices to
-              your needs. All of our supplies are of the highest
-              quality and are manufactured by one of the following:
-              <ul>
-                <li>
-                  <a
-                    target="__blank"
-                    href="http://www.crescentcardboard.com/#home"
-                  >
-                    Crescent
-                  </a>
-                </li>
-                <li>
-                  <a target="__blank" href="https://tru-vue.com/">Tru Vue</a>
-                </li>
-                <li>
-                  <a
-                    target="__blank"
-                    href="https://www.nielsen-design.de/en-EN/home/"
-                  >
-                    NielsenBainBridge
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="__welcome-login">
-              <Login handleLogin={this.handleLogin} props={this.props} />
-            </div>
-          </div>
+          <WelcomeDisplay />
           <div className="__welcome-collapse">
-            <div
-              className="__welcome-tab"
-            >
-              <div className="__icon">
-                <i
-                  id="__welcome-icon"
-                  className="fa fa-arrow-left"
-                  aria-hidden="true"
-                />
-              </div>
+            <div className="__welcome-tab">
+              <i className="fa fa-arrow-left" />
             </div>
           </div>
         </div>
