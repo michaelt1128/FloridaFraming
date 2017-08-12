@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Card from 'shared/components/Card';
-import Login from './components/Login';
-import './styles.scss';
 import { autobind } from 'core-decorators';
 import { updateUsername, updatePassword } from 'reduxStore/auth';
+import Card from 'shared/components/Card';
 import 'shared/styles/font-awesome-4.7.0/css/font-awesome.css';
+import Login from './components/Login';
 import WelcomeDisplay from './components/WelcomeDisplay'
+import './styles.scss';
 
 
 @withRouter
@@ -23,10 +24,9 @@ import WelcomeDisplay from './components/WelcomeDisplay'
   }
 )
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-
-  }
+  state = {
+    showWelcomeDisplay: true
+  };
 
   getCards() {
     let x = [1, 2, 3, 4, 5, 6];
@@ -45,12 +45,17 @@ export default class Home extends Component {
   }
 
   render() {
+    const welcomeCollapseCn = classnames('__welcome-collapse', { '--left': !this.state.showWelcomeDisplay });
+    const welcomeContainerCn = classnames('__welcome-container', { '--closed': !this.state.showWelcomeDisplay });
     return (
       <div className="home-container">
-        <div className="__welcome-container">
-          <WelcomeDisplay {...this.props} />
-          <div className="__welcome-collapse">
-            <div className="__welcome-tab" onClick={() => console.log('close me')}>
+        <div className={welcomeContainerCn}>
+          <WelcomeDisplay {...this.props} {...this.state} />
+          <div className={welcomeCollapseCn}>
+            <div
+              className="__welcome-tab"
+              onClick={() => this.setState({ showWelcomeDisplay: !this.state.showWelcomeDisplay })}
+            >
               <i className="fa fa-arrow-left" />
             </div>
           </div>

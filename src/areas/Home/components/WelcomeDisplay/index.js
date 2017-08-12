@@ -4,6 +4,9 @@ import Login from '../Login';
 import './styles.scss';
 
 const WelcomeDisplay = props => {
+  if (!props.showWelcomeDisplay) {
+    return (null);
+  }
   return (
     <div className="__welcome-text">
       <h3>Welcome to the site</h3>
