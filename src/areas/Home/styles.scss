@@ -23,9 +23,6 @@
             border-top: 1px solid #e2e2e2;
             border-bottom: 1px solid #e2e2e2;
             border-left: 1px solid #e2e2e2;
-            .__welcome-text {
-                padding: 8px;
-            }
         }
         .__welcome-collapse {
             background: rgba(192, 192, 192, 0.15);
@@ -82,9 +79,6 @@
                 border-bottom: 1px solid #e2e2e2;
                 border-left: 1px solid #e2e2e2;
                 flex-direction: row;
-                .__welcome-text {
-                    max-width: 50%;
-                }
             }
         }
         .__welcome-collapse {

@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
-import { connect } from "react-redux";
-import Card from "shared/components/Card";
-import Login from "./components/Login";
-import "./styles.scss";
-import { autobind } from "core-decorators";
-import { updateUsername, updatePassword } from "reduxStore/auth";
-import "shared/styles/font-awesome-4.7.0/css/font-awesome.css";
-import { slideOut } from "react-animations";
-import WelcomeDisplay from "./components/WelcomeDisplay"
+import React, { Component } from 'react';
+import { withRouter, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Card from 'shared/components/Card';
+import Login from './components/Login';
+import './styles.scss';
+import { autobind } from 'core-decorators';
+import { updateUsername, updatePassword } from 'reduxStore/auth';
+import 'shared/styles/font-awesome-4.7.0/css/font-awesome.css';
+import WelcomeDisplay from './components/WelcomeDisplay'
 
 
 @withRouter
@@ -16,7 +15,7 @@ import WelcomeDisplay from "./components/WelcomeDisplay"
   state => ({
     username: state.auth.username,
     password: state.auth.password,
-    search_query: state.supply.search_query
+    searchQuery: state.supply.search_query
   }),
   {
     updateUsername,
@@ -49,9 +48,9 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <div className="__welcome-container">
-          <WelcomeDisplay />
+          <WelcomeDisplay {...this.props} />
           <div className="__welcome-collapse">
-            <div className="__welcome-tab">
+            <div className="__welcome-tab" onClick={() => console.log('close me')}>
               <i className="fa fa-arrow-left" />
             </div>
           </div>

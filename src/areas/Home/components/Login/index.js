@@ -1,10 +1,10 @@
 import React from 'react';
 import TextField from 'shared/components/TextField';
 
-import './style.scss';
+import './styles.scss';
 
 const Login = props => {
-    var { username, updateUsername, updatePassword, password } = props.props;
+    var { username, updateUsername, updatePassword, password } = props;
     return (
         <div className="ffs-login">
             <h3>Member Login</h3>
@@ -12,12 +12,14 @@ const Login = props => {
                 <TextField
                     type="text"
                     onChange={(event) => updateUsername(event.target.value)}
-                    value={username} placeholder="Email" />
+                    value={username}
+                    label="Email"
+                />
                 <TextField
                     type="password"
                     onChange={(event) => updatePassword(event.target.value)}
                     value={password}
-                    placeholder="Password"
+                    label="Password"
                 />
                 <button
                     className="__submit-button"

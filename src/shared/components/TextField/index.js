@@ -20,7 +20,7 @@ const TextField = props => {
                 maxLength={props.maxLength}
                 readOnly={props.readonly}
                 disabled={props.disabled}
-                type={props.type === 'number' ? 'number' : 'text'}
+                type={props.type || 'text'}
                 value={props.value}
             />
         </div>
