@@ -17,18 +17,20 @@
         display: flex;
         flex-direction: row;
         min-width: 500px;
-        margin-left: 16px;
+        padding-left: 16px;
         width: 50%;
-        transition: all .3s ease-in;
+        transition: all .3s ease-out;
+        background: $background-gray;
+        border: 1px solid $border-gray;
 
         &.--closed {
             position: absolute;
             left: 0;
             width: 16px;
             min-width: 16px;
-            margin-left: 0;
+            padding-left: 0;
             height: 100%;
-            transition: all .3s ease-in;
+            transition: all .3s ease-out;
             .fa {
                 transition: all .3s ease-in;
                 transform: rotate(180deg);
@@ -36,31 +38,28 @@
         }
 
         .__welcome-collapse {
-            background: rgba(192, 192, 192, 0.15);
-            border-top: 1px solid $light-gray;
-            border-bottom: 1px solid $light-gray;
-            border-right: 1px solid $light-gray;
-            align-self: center;
-            height: 100%;
             display: flex;
             justify-content: center;
             position: relative;
+            background: $background-gray;
+            height: 100%;
 
             .__welcome-tab {
-                right: -1px;
-                position: relative;
-                cursor: pointer;
-                background: white;
-                height: 80px;
-                align-self: center;
-                border-top: 1px solid $light-gray;
-                border-bottom: 1px solid $light-gray;
-                border-left: 1px solid $light-gray;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                right: -1px;
+                position: relative;
+                cursor: pointer;
+                background: $white;
+                height: 80px;
+                align-self: center;
+                border-top: 1px solid $border-gray;
+                border-bottom: 1px solid $border-gray;
+                border-left: 1px solid $border-gray;
+                border-right: 1px solid $white;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
                 color: $med-dark-gray;
             }
         }
@@ -85,9 +84,9 @@
             width: 100%;
             .__welcome-content {
                 background: rgba(192, 192, 192, 0.15);
-                border-top: 1px solid $light-gray;
-                border-bottom: 1px solid $light-gray;
-                border-left: 1px solid $light-gray;
+                border-top: 1px solid $border-gray;
+                border-bottom: 1px solid $border-gray;
+                border-left: 1px solid $border-gray;
                 flex-direction: row;
             }
         }
