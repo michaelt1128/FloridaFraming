@@ -61,7 +61,9 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="__card-container">
-          {this.getCards()}
+          <div className="__cards">
+            {this.getCards()}
+          </div>
         </div>
       </div>
     );

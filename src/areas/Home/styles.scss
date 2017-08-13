@@ -9,8 +9,15 @@
 
     .__card-container {
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
+        flex: 1;
+        justify-content: center;
+
+        .__cards {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            max-width: 880px;
+        }
     }
 
     .__welcome-container {
