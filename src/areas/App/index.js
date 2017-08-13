@@ -13,7 +13,9 @@ export default class App extends Component {
         return (
             <div>
                 <Header />
-                <Route exact path="/" component={HomeContainer} />
+                <div className="content">
+                    <Route exact path="/" component={HomeContainer} />
+                </div>
                 <Footer />
             </div>
         );

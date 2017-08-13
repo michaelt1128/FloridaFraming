@@ -9,7 +9,7 @@
 
     .__card-container {
         display: flex;
-        flex: 1;
+        flex: 2;
         justify-content: center;
 
         .__cards {
@@ -23,9 +23,10 @@
     .__welcome-container {
         display: flex;
         flex-direction: row;
-        min-width: 500px;
         padding-left: 16px;
-        width: 50%;
+        min-width: 320px;
+        max-width: 640px;
+        flex: 1;
         transition: all .3s ease-out;
         background: $background-gray;
         border: 1px solid $border-gray;
@@ -79,7 +80,7 @@
     }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 720px) {
     .home-container {
         flex-direction: column;
         .__card-container {
