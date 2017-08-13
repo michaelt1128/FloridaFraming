@@ -1,5 +1,15 @@
 @import '~shared/styles/colors';
 
-html{
+html {
     font-family:$global-font;
+
+    .content {
+        min-height: calc(100vh - 284px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
 }

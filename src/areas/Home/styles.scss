@@ -4,13 +4,15 @@
     flex-direction: row;
     align-self: center;
     justify-content: space-between;
-    margin-top: 32px;
     position: relative;
+    flex: 1;
+    width: 100%;
 
     .__card-container {
         display: flex;
         flex: 2;
         justify-content: center;
+        align-items: center;
 
         .__cards {
             display: flex;
