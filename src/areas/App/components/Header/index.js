@@ -27,7 +27,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="__logo">
-          <img className={this.props.search_query?"__logo-image":""} src="assets/Florida_Framing.jpg" />
+          <img className={this.props.search_query ? '__logo-image' : ''} src="assets/Florida_Framing.png" />
         </div>
         <div className="__actions">
           <TextField

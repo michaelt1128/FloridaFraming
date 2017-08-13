@@ -1,13 +1,13 @@
 @import '~shared/styles/colors';
 
 .header {
-    margin-top:16px;
     height: 72px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    padding: 16px 16px 0 16px;
     
     .__logo {
         display: flex;
